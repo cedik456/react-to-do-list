@@ -40,11 +40,27 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background: hsla(191, 65%, 60%, 1);
+
   background: linear-gradient(
-    90deg,
-    hsla(235, 100%, 78%, 1) 0%,
-    hsla(222, 77%, 33%, 1) 100%
+    225deg,
+    hsla(191, 65%, 60%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
   );
+
+  background: -moz-linear-gradient(
+    225deg,
+    hsla(191, 65%, 60%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    225deg,
+    hsla(191, 65%, 60%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#58C4DC", endColorstr="#60EFFF", GradientType=1 );
 }
 
 /* A elements that don't have a class get default styles */
@@ -76,6 +92,12 @@ picture {
 }
 
 /* GENERAL */
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
 .to-do-list {
   width: 500px;
@@ -117,7 +139,7 @@ input {
 button {
   border: none;
   outline: none;
-  background: hsla(222, 77%, 33%, 1);
+  background: hsla(191, 65%, 60%, 1);
   color: #ffffff;
   font-size: 16px;
   cursor: pointer;
@@ -132,8 +154,9 @@ button {
 ol li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   list-style: none;
-  padding: 12px 8px 5px 20px;
+  padding: 12px 8px 11px 20px;
   user-select: none;
   cursor: pointer;
 }
@@ -148,12 +171,12 @@ ol li .text {
 }
 
 .delete-btn {
-  padding: 5px 10px;
+  padding: 5px 15px;
   background-color: red;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .move-btn {
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 10px 15px;
+  border-radius: 10px;
 }
